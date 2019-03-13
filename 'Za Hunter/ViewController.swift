@@ -11,8 +11,8 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-    @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var region = MKCoordinateRegion()
     
@@ -24,6 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.startUpdatingLocation()
         mapView.delegate = self
     }
+    
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = "pizza"
@@ -40,6 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }
         }
     }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.first!
         let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
@@ -63,5 +65,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return pinView
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "ShowLocationDetailsSegue", sender: nil)
+    }
 }
 
