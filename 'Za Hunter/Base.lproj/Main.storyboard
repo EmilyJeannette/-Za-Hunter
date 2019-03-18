@@ -66,10 +66,55 @@
                     <view key="view" contentMode="scaleToFill" id="FdX-Y0-naV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0K-aV-abn">
+                                <rect key="frame" x="87.5" y="200.5" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XcP-gN-iDD"/>
+                                    <constraint firstAttribute="width" constant="200" id="hsE-gr-bed"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvP-hU-aXL">
+                                <rect key="frame" x="87.5" y="258.5" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Kry-Hl-pH8"/>
+                                    <constraint firstAttribute="height" constant="150" id="h90-zs-rtC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKL-gD-9cB">
+                                <rect key="frame" x="87.5" y="416.5" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BfB-qN-9VN"/>
+                                    <constraint firstAttribute="width" constant="200" id="qfi-fp-Snm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bvP-hU-aXL" firstAttribute="top" secondItem="H0K-aV-abn" secondAttribute="bottom" constant="8" symbolic="YES" id="3Qp-kc-d0y"/>
+                            <constraint firstItem="hKL-gD-9cB" firstAttribute="centerX" secondItem="FdX-Y0-naV" secondAttribute="centerX" id="BVK-A4-GZX"/>
+                            <constraint firstItem="H0K-aV-abn" firstAttribute="centerX" secondItem="FdX-Y0-naV" secondAttribute="centerX" id="dcm-bO-KPk"/>
+                            <constraint firstItem="bvP-hU-aXL" firstAttribute="centerX" secondItem="FdX-Y0-naV" secondAttribute="centerX" id="pba-PS-wYS"/>
+                            <constraint firstItem="hKL-gD-9cB" firstAttribute="top" secondItem="bvP-hU-aXL" secondAttribute="bottom" constant="8" symbolic="YES" id="qba-kk-ZCA"/>
+                            <constraint firstItem="bvP-hU-aXL" firstAttribute="centerY" secondItem="FdX-Y0-naV" secondAttribute="centerY" id="yro-pc-F2r"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MMc-4A-xce"/>
                     </view>
                     <navigationItem key="navigationItem" id="sYT-82-CnO"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="bvP-hU-aXL" id="0TR-QW-UJP"/>
+                        <outlet property="nameLabel" destination="H0K-aV-abn" id="X0N-vo-c90"/>
+                        <outlet property="phoneLabel" destination="hKL-gD-9cB" id="DIV-uN-s91"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zv-Ka-qv1" sceneMemberID="firstResponder"/>
             </objects>
